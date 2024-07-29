@@ -43,7 +43,7 @@ Isso iniciará o servidor de desenvolvimento e abrirá o aplicativo no seu naveg
 
 A estrutura do projeto é organizada da seguinte maneira:
 
-1. src/components: Contém todos os componentes React utilizados na aplicação.
+1. **__src/components:__** Contém todos os componentes React utilizados na aplicação.
 
     atoms: Componentes básicos como Button, Input e Textarea.
 
@@ -55,27 +55,27 @@ A estrutura do projeto é organizada da seguinte maneira:
 
     templates: Contém templates de páginas, como FilmePageTemplate.
 
-2. src/context: Contém o contexto de autenticação (AuthContext).
+2. **__src/context:__** Contém o contexto de autenticação (AuthContext).
 
-3. src/api: Configurações do axios para interações com a API backend.
+3. **__src/api:__** Configurações do axios para interações com a API backend.
 
-4. src/App.js: Arquivo principal que configura as rotas da aplicação.
+4. **__src/App.js:__** Arquivo principal que configura as rotas da aplicação.
 
-5. src/index.js: Arquivo de entrada da aplicação.
+5. **__src/index.js:__** Arquivo de entrada da aplicação.
 
 ## Principais Funcionalidades
 
-1. **Login/Registro:** Usuários podem criar contas e fazer login para acessar funcionalidades protegidas.
+1. **__Login/Registro:__** Usuários podem criar contas e fazer login para acessar funcionalidades protegidas.
 
-2. **Adicionar Filmes:** Usuários autenticados podem adicionar novos filmes ao banco de dados.
+2. **__Adicionar Filmes:__** Usuários autenticados podem adicionar novos filmes ao banco de dados.
 
-3. **Avaliar Filmes:** Usuários podem avaliar filmes com uma pontuação e um comentário.
+3. **__Avaliar Filmes:__** Usuários podem avaliar filmes com uma pontuação e um comentário.
 
-4. **Curtir/Descurtir Avaliações:** Avaliações de filmes podem receber curtidas ou descurtidas.
+4. **__Curtir/Descurtir Avaliações:__** Avaliações de filmes podem receber curtidas ou descurtidas.
 
-5. **Listar Filmes:** Exibição de uma lista de filmes com detalhes básicos.
+5. **__Listar Filmes:__** Exibição de uma lista de filmes com detalhes básicos.
 
-6. **Detalhes do Filme:** Visualização detalhada de informações do filme e suas avaliações.
+6. **__Detalhes do Filme:__** Visualização detalhada de informações do filme e suas avaliações.
 
 ## Configuração da API
 
@@ -103,8 +103,7 @@ export default api;
 
 Você pode definir variáveis de ambiente no arquivo `.env` na raiz do projeto. Um exemplo de configuração pode ser:
 
-```REACT_APP_API_URL=http://localhost:8000/api
-```
+```REACT_APP_API_URL=http://localhost:8000/api```
 
 ## Licença
 Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo **LICENSE** para mais detalhes.
