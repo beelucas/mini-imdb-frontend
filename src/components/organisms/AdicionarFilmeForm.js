@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import FormField from '../molecules/FormField';
+import Button from '../atoms/Button';
+import api from '../../api';
 import { useNavigate } from 'react-router-dom';
-import api from '../api';
 
-const AdicionarFilme = () => {
+const AdicionarFilmeForm = () => {
     const [filme, setFilme] = useState({
         titulo: '',
         genero: '',
@@ -25,7 +27,7 @@ const AdicionarFilme = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await api.post('/filmes', filme, {
+            await api.post('/filmes', filme, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -41,17 +43,16 @@ const AdicionarFilme = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Adicionar Filme</h2>
-            <input type="text" name="titulo" placeholder="Título" value={filme.titulo} onChange={handleChange} required />
-            <input type="text" name="genero" placeholder="Gênero" value={filme.genero} onChange={handleChange} required />
-            <input type="number" name="ano_lancamento" placeholder="Ano de Lançamento" value={filme.ano_lancamento} onChange={handleChange} required />
-            <input type="text" name="diretor" placeholder="Diretor" value={filme.diretor} onChange={handleChange} required />
-            <input type="text" name="elenco" placeholder="Elenco" value={filme.elenco} onChange={handleChange} required />
-            <textarea name="sinopse" placeholder="Sinopse" value={filme.sinopse} onChange={handleChange} required></textarea>
-            <button type="submit">Adicionar Filme</button>
+            <FormField label="Título" name="titulo" value={filme.titulo} onChange={handleChange} placeholder="Título" required />
+            <FormField label="Gênero" name="genero" value={filme.genero} onChange={handleChange} placeholder="Gênero" required />
+            <FormField label="Ano de Lançamento" type="number" name="ano_lancamento" value={filme.ano_lancamento} onChange={handleChange} placeholder="Ano de Lançamento" required />
+            <FormField label="Diretor" name="diretor" value={filme.diretor} onChange={handleChange} placeholder="Diretor" required />
+            <FormField label="Elenco" name="elenco" value={filme.elenco} onChange={handleChange} placeholder="Elenco" required />
+            <FormField label="Sinopse" name="sinopse" value={filme.sinopse} onChange={handleChange} isTextarea placeholder="Sinopse" required />
+            <Button type="submit">Adicionar Filme</Button>
             {error && <p>Erro ao adicionar filme: {error.message}</p>}
         </form>
     );
 };
 
-export default AdicionarFilme;
-
+export default AdicionarFilmeForm;

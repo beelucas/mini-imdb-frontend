@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import ListaFilmes from './components/ListaFilmes';
-import DetalhesFilme from './components/DetalhesFilme';
-import AdicionarFilme from './components/AdicionarFilme';
-import PrivateRoute from './components/PrivateRoute';
+import Home from './components/pages/Home';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import ListaFilmes from './components/pages/ListaFilmes';
+import DetalhesFilme from './components/pages/DetalhesFilme';
+import AdicionarFilme from './components/pages/AdicionarFilme';
+import PrivateRoute from './components/pages/PrivateRoute';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import './App.css';
 

@@ -1,10 +1,11 @@
-
 import React, { useState, useContext } from 'react';
+import FormField from '../molecules/FormField';
+import Button from '../atoms/Button';
 import { useNavigate } from 'react-router-dom';
-import api from '../api';
-import { AuthContext } from '../context/AuthContext';
+import api from '../../api';
+import { AuthContext } from '../../context/AuthContext';
 
-const Login = () => {
+const LoginForm = () => {
     const [credentials, setCredentials] = useState({ email: '', password: '' });
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -31,12 +32,11 @@ const Login = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Login</h2>
-            <input type="email" name="email" placeholder="Email" value={credentials.email} onChange={handleChange} required />
-            <input type="password" name="password" placeholder="Senha" value={credentials.password} onChange={handleChange} required />
-            <button type="submit">Login</button>
+            <FormField label="Email" type="email" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required />
+            <FormField label="Senha" type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Senha" required />
+            <Button type="submit">Login</Button>
         </form>
     );
 };
 
-export default Login;
-
+export default LoginForm;
