@@ -2,7 +2,7 @@ import React from 'react';
 import LikeDislike from '../molecules/LikeDislike';
 
 const DetalhesFilmeInfo = ({ filme }) => {
-    const {titulo, sinopse, avaliacoes } = filme.filme;
+    const {titulo, sinopse,} = filme.filme;
     return(
     <div>
         <h1>{titulo}</h1>
