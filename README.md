@@ -104,6 +104,3 @@ export default api;
 Você pode definir variáveis de ambiente no arquivo `.env` na raiz do projeto. Um exemplo de configuração pode ser:
 
 ```REACT_APP_API_URL=http://localhost:8000/api```
-
-## Licença
-Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo **LICENSE** para mais detalhes.
